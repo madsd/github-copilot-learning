@@ -4,9 +4,10 @@ Scenario 01: Code Completion Basics
 Learn how GitHub Copilot suggests code as you type.
 
 INSTRUCTIONS:
-1. Place your cursor at the end of each TODO line
-2. Start typing or press Enter to see Copilot suggestions
-3. Press Tab to accept, Esc to dismiss, or Alt+] to see alternatives
+1. Go to each TODO comment and read what to do
+2. Position your cursor on the BLANK LINE below the TODO
+3. Start typing the suggested code - Copilot will offer completions
+4. Press Tab to accept, Esc to dismiss, or Alt+] to see alternatives
 
 WHAT YOU'LL LEARN:
 - Basic code completion
@@ -21,7 +22,7 @@ WHAT YOU'LL LEARN:
 
 first_name = "Alice"
 last_name = "Smith"
-# TODO: Start typing 'full_name = ' and see what Copilot suggests
+# TODO: On the blank line below, type 'full_name = ' and see what Copilot suggests
 
 
 # =============================================================================
@@ -29,8 +30,9 @@ last_name = "Smith"
 # =============================================================================
 # Copilot recognizes patterns and continues them
 
-days_of_week = ["Monday", "Tuesday", "Wednesday"]
-# TODO: Continue the list - add a comma after Wednesday and press Enter
+days_of_week = ["Monday", "Tuesday", "Wednesday"]  # <- Add a comma after the ]
+# TODO: Place cursor at the end of the list above, add a comma, press Enter
+#       Copilot will suggest the next days of the week
 
 
 # =============================================================================
@@ -41,7 +43,8 @@ days_of_week = ["Monday", "Tuesday", "Wednesday"]
 user = {
     "name": "John Doe",
     "email": "john@example.com",
-    # TODO: Add more fields - what does Copilot suggest?
+    # TODO: Place cursor at the end of the email line (after the comma)
+    #       Press Enter and start typing a quote " to see field suggestions
 }
 
 
@@ -51,12 +54,12 @@ user = {
 # Copilot can complete entire function bodies based on the name
 
 def calculate_area_of_circle(radius):
-    # TODO: Let Copilot complete this function
+    # TODO: Delete 'pass', type 'return' and let Copilot complete
     pass
 
 
 def is_palindrome(text):
-    # TODO: Let Copilot complete this function
+    # TODO: Delete 'pass', type 'return' and let Copilot complete
     pass
 
 
@@ -65,8 +68,9 @@ def is_palindrome(text):
 # =============================================================================
 # Copilot suggests common imports based on your code context
 
-# TODO: Type 'import ' and see common suggestions
-# TODO: Type 'from datetime import ' and see available options
+# TODO: On the blank line below, type 'import ' and see common suggestions
+#       Or try 'from datetime import ' and see available options
+
 
 
 # =============================================================================
@@ -76,7 +80,8 @@ def is_palindrome(text):
 
 numbers = [1, 2, 3, 4, 5]
 
-# TODO: Type 'for ' and let Copilot suggest the loop structure
+# TODO: On the blank line below, type 'for ' and let Copilot suggest the loop
+
 
 
 # =============================================================================
@@ -85,7 +90,7 @@ numbers = [1, 2, 3, 4, 5]
 # Copilot can generate class structures
 
 class Rectangle:
-    # TODO: Let Copilot suggest __init__ and methods
+    # TODO: Delete 'pass' below, type 'def __init__' and let Copilot complete
     pass
 
 
