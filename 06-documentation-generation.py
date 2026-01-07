@@ -3,25 +3,33 @@ Scenario 06: Documentation Generation
 ======================================
 Create docstrings and documentation with GitHub Copilot.
 
-INSTRUCTIONS:
-1. Place cursor inside a function without documentation
-2. Type triple quotes (''') or (\"\"\") and press Enter
-3. Let Copilot generate the docstring
-4. Or use Copilot Chat: /doc
+HOW TO GENERATE DOCSTRINGS:
+
+METHOD 1 - Inline Generation:
+1. Place cursor on the BLANK LINE right after the function signature (def line)
+2. Type three quotes: \"\"\"
+3. Press Enter - Copilot will suggest the docstring content
+4. Press Tab to accept
+
+METHOD 2 - Copilot Chat:
+1. Select the entire function
+2. Press Ctrl+I (inline chat) or Ctrl+Alt+I (chat panel)
+3. Type: /doc  OR  "add docstring"
 
 WHAT YOU'LL LEARN:
 - Generating docstrings in various formats
-- Creating README content
-- Documenting APIs and classes
 - Using /doc command in Copilot Chat
+- Documenting classes and APIs
 """
 
 # =============================================================================
 # EXERCISE 1: Basic Docstrings
 # =============================================================================
-# Place cursor after the function definition and type """ to trigger docstring
+# Each function has a blank line after 'def' where you should type """
 
 def calculate_discount(price, discount_percent, max_discount=None):
+    ""
+    # 👆 Place cursor on the blank line ABOVE this comment, type """ and Enter
     if discount_percent < 0 or discount_percent > 100:
         raise ValueError("Discount must be between 0 and 100")
     
@@ -32,11 +40,9 @@ def calculate_discount(price, discount_percent, max_discount=None):
     
     return price - discount_amount
 
-# TODO: Add a docstring to this function
-# TIP: Place cursor on line after 'def' and type """
-
 
 def merge_sorted_lists(list1, list2):
+    # 👆 Place cursor on blank line above, type """ and Enter
     result = []
     i = j = 0
     
@@ -52,38 +58,39 @@ def merge_sorted_lists(list1, list2):
     result.extend(list2[j:])
     return result
 
-# TODO: Add a docstring explaining the algorithm
-
 
 # =============================================================================
 # EXERCISE 2: Different Docstring Formats
 # =============================================================================
-# Copilot can generate various docstring styles
+# Try generating docstrings in different styles
 
-# Google Style
+# Google Style - type """ on the blank line below def
 def fetch_user_data(user_id, include_metadata=False):
-    # TODO: Add a Google-style docstring
-    # TIP: Type """ and start with "Fetches user data..."
+    # 👆 Type """ above, then start with "Fetches user data from..."
     pass
 
 
-# NumPy Style
+# NumPy Style - type """ then write "Parameters" and Copilot continues
 def calculate_statistics(data):
-    # TODO: Add a NumPy-style docstring
-    # TIP: Include Parameters, Returns, and Examples sections
+    # 👆 Type """ above, then type "Calculate" and let Copilot continue
     pass
 
 
 # Sphinx/reStructuredText Style
 def process_transaction(amount, currency, description=None):
-    # TODO: Add a Sphinx-style docstring with :param and :returns:
+    # 👆 Type """ above, then type ":param amount:" and Copilot continues
     pass
 
 
 # =============================================================================
-# EXERCISE 3: Class Documentation
+# EXERCISE 3: Class Documentation (Use Copilot Chat)
 # =============================================================================
-# Document this class using Copilot
+# For classes, using Copilot Chat is easier than inline docstrings
+# 
+# STEPS:
+# 1. Select the ENTIRE class below (from 'class' to the last method)
+# 2. Press Ctrl+I (inline chat)
+# 3. Type: /doc  OR  "add docstrings to this class"
 
 class TaskManager:
     def __init__(self, max_tasks=100):
@@ -119,39 +126,31 @@ class TaskManager:
     def get_tasks_by_priority(self, priority):
         return [t for t in self.tasks if t["priority"] == priority]
 
-# TODO: Add class docstring and method docstrings
-# TIP: Select the class and use /doc in Copilot Chat
-
 
 # =============================================================================
 # EXERCISE 4: API Documentation
 # =============================================================================
-# Document these API-style functions
+# Type """ on the blank line after each def, then describe the API endpoint
 
 def create_user(username, email, password, role="user"):
-    # TODO: Document with API-style docstring including:
-    # - Endpoint description
-    # - Parameters with types
-    # - Return value
-    # - Possible errors
-    # - Example usage
+    # 👆 Type """ above, then start: "Create a new user account..."
     pass
 
 
 def update_user_profile(user_id, updates):
-    # TODO: Document this API endpoint
+    # 👆 Type """ above
     pass
 
 
 def delete_user(user_id, soft_delete=True):
-    # TODO: Document this API endpoint
+    # 👆 Type """ above
     pass
 
 
 # =============================================================================
 # EXERCISE 5: Complex Function Documentation
 # =============================================================================
-# This function needs comprehensive documentation
+# Functions with many parameters benefit most from Copilot docs
 
 def analyze_text(
     text,
@@ -163,52 +162,15 @@ def analyze_text(
     entity_types=None,
     custom_dictionary=None
 ):
-    """
-    👇 Delete this docstring, type triple quotes, and let Copilot generate:
-    - Description
-    - All parameters with types and defaults
-    - Return value structure
-    - Examples
-    - Raises section
-    """
+    # 👆 Type """ on the blank line above this comment
+    # Copilot will generate comprehensive docs for all parameters
     pass
 
 
 # =============================================================================
-# EXERCISE 6: Module-Level Documentation
+# EXERCISE 6: Type Hints + Documentation
 # =============================================================================
-# Create a module docstring for a hypothetical module
-
-"""
-TODO: Generate a module docstring that includes:
-- Module name and purpose
-- Main classes and functions
-- Usage examples
-- Dependencies
-- Author information
-
-TIP: Ask Copilot Chat: "Generate a module docstring for a data processing module"
-"""
-
-
-# =============================================================================
-# EXERCISE 7: Generate README Content
-# =============================================================================
-# Ask Copilot Chat to generate README content for this code
-
-# TIP: Select all the code and ask:
-# "Generate README.md content for this module including:
-# - Overview
-# - Installation
-# - Usage examples
-# - API reference
-# - Contributing guidelines"
-
-
-# =============================================================================
-# EXERCISE 8: Type Hints + Documentation
-# =============================================================================
-# Combine type hints with docstrings
+# Type hints help Copilot generate better docstrings
 
 from typing import Optional, List, Dict, Union
 from datetime import datetime
@@ -222,33 +184,54 @@ def search_products(
     limit: int = 20,
     offset: int = 0
 ) -> Dict[str, Union[List[Dict], int, bool]]:
-    """
-    👇 Delete this docstring, type triple quotes, and let Copilot generate
-    The type hints will help it understand the structure
-    """
+    # 👆 Type """ on the blank line above this comment
+    # Type hints help Copilot understand types and generate better docs
     pass
+
+
+# =============================================================================
+# EXERCISE 7: Using Copilot Chat for Documentation
+# =============================================================================
+# Sometimes Chat is easier than inline docstrings
+
+# TRY THESE COPILOT CHAT COMMANDS:
+#
+# 1. Select any function above, press Ctrl+I, type: /doc
+#
+# 2. Select the TaskManager class, press Ctrl+I, type:
+#    "Add Google-style docstrings to all methods"
+#
+# 3. Select multiple functions, press Ctrl+I, type:
+#    "Add NumPy-style docstrings"
+#
+# 4. Open Chat panel (Ctrl+Alt+I), type:
+#    "Generate README documentation for this file"
 
 
 # =============================================================================
 # KEY TAKEAWAYS
 # =============================================================================
 """
-✅ Type \"\"\" or ''' to trigger docstring generation
-✅ Use /doc in Copilot Chat for quick documentation
-✅ Copilot adapts to different docstring styles
-✅ Type hints improve documentation quality
-✅ Select code and ask Chat to document it
+TWO WAYS TO GENERATE DOCSTRINGS:
+
+1. INLINE METHOD:
+   - Go to blank line after 'def function_name():'
+   - Type \"\"\" and press Enter
+   - Copilot suggests the docstring
+   - Press Tab to accept
+
+2. COPILOT CHAT METHOD (often easier):
+   - Select the function or class
+   - Press Ctrl+I (inline) or Ctrl+Alt+I (panel)
+   - Type: /doc
+   - Copilot adds docstrings
 
 DOCSTRING STYLES:
 - Google Style: Args, Returns, Raises sections
 - NumPy Style: Parameters, Returns, Examples
 - Sphinx: :param:, :returns:, :raises:
 
-COPILOT CHAT PROMPTS:
-- "/doc"
-- "Add Google-style docstrings to this class"
-- "Generate comprehensive API documentation"
-- "Create a README for this module"
+TIP: Start typing the style you want after \"\"\" and Copilot will follow it!
 
 NEXT: Move on to 07-code-refactoring.js to learn
       how to improve code quality with Copilot!
