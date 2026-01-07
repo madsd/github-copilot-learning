@@ -4,9 +4,12 @@
  * Create complex regular expressions with GitHub Copilot.
  *
  * INSTRUCTIONS:
- * 1. Write a comment describing what you want to match
- * 2. Let Copilot generate the regex pattern
- * 3. Use Copilot Chat to explain complex patterns
+ * 1. Read the comment describing what the regex should match
+ * 2. Place cursor after the = "" and delete the ""
+ * 3. Type / to start a regex and let Copilot complete the pattern
+ * 4. Use Copilot Chat to explain complex patterns
+ *
+ * TIP: You can also use Copilot Chat: "Generate a regex to match X"
  *
  * WHAT YOU'LL LEARN:
  * - Generating regex from natural language
@@ -17,18 +20,18 @@
 // =============================================================================
 // EXERCISE 1: Basic Pattern Generation
 // =============================================================================
-// Write a comment describing what you want to match, then let Copilot generate
+// Delete "" and type "/" to let Copilot generate the regex
 
 // Regex to match a valid email address
-// TODO: Let Copilot generate the pattern
+// 👇 Delete "" and type "/"
 const emailPattern = "";
 
 // Regex to match a US phone number (formats: 123-456-7890, (123) 456-7890, 1234567890)
-// TODO: Let Copilot generate the pattern
+// 👇 Delete "" and type "/"
 const phonePattern = "";
 
 // Regex to match a URL (http or https)
-// TODO: Let Copilot generate the pattern
+// 👇 Delete "" and type "/"
 const urlPattern = "";
 
 
@@ -153,20 +156,20 @@ const jsMultilineCommentPattern = "";
 // Function to censor profanity (replace with asterisks)
 // Words to censor: "bad", "ugly", "awful"
 function censorText(text) {
-    // TODO: Let Copilot generate the pattern and replacement logic
+    // 👇 Delete "" and type "/" to let Copilot generate the pattern
     const pattern = "";
     return text.replace(new RegExp(pattern, 'gi'), match => '*'.repeat(match.length));
 }
 
 // Function to convert markdown bold to HTML (**text** to <strong>text</strong>)
 function markdownBoldToHTML(text) {
-    // TODO: Let Copilot generate the pattern and replacement
+    // 👇 Type "return text.replace(/" to let Copilot complete
     return text;
 }
 
 // Function to convert URLs in text to clickable links
 function linkifyURLs(text) {
-    // TODO: Let Copilot generate the pattern and replacement
+    // 👇 Type "return text.replace(/" to let Copilot complete
     return text;
 }
 
@@ -209,7 +212,7 @@ const mysteryPattern3 = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 // =============================================================================
 // EXERCISE 11: Regex Utility Functions
 // =============================================================================
-// Let Copilot help you build these utilities
+// Type the function body to let Copilot help you build these utilities
 
 /**
  * Escape special regex characters in a string
@@ -217,7 +220,8 @@ const mysteryPattern3 = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
  * @returns {string} - The escaped string
  */
 function escapeRegex(string) {
-    // TODO: Let Copilot generate this function
+    // 👇 Type "return string.replace" below
+
 }
 
 /**
@@ -226,7 +230,8 @@ function escapeRegex(string) {
  * @returns {RegExp} - The combined regex
  */
 function matchAnyWord(words) {
-    // TODO: Let Copilot generate this function
+    // 👇 Type "return new RegExp" below
+
 }
 
 /**
@@ -235,7 +240,8 @@ function matchAnyWord(words) {
  * @returns {boolean} - Whether the pattern is valid
  */
 function isValidRegex(pattern) {
-    // TODO: Let Copilot generate this function
+    // 👇 Type "try" below
+
 }
 
 

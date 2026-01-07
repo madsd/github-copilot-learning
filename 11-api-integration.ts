@@ -4,9 +4,12 @@
  * Build API calls and handle responses with GitHub Copilot.
  *
  * INSTRUCTIONS:
- * 1. Describe the API you want to call in comments
- * 2. Let Copilot generate the fetch/axios code
- * 3. Ask for error handling and retry logic
+ * 1. Function signatures and types are already defined
+ * 2. Place cursor inside the function body
+ * 3. Start typing (e.g., "const response = " or "return") to trigger Copilot
+ * 4. Copilot uses the types and function names to generate appropriate code
+ *
+ * TIP: Use Ctrl+I on a function to ask "implement this function"
  *
  * WHAT YOU'LL LEARN:
  * - Generating API client code
@@ -58,25 +61,25 @@ interface PaginatedResponse<T> {
 // =============================================================================
 // EXERCISE 1: Basic API Client
 // =============================================================================
-// Create a basic API client using fetch
+// Type inside each function to let Copilot generate the implementation
 
 const API_BASE_URL = 'https://jsonplaceholder.typicode.com';
 
 // Function to fetch all users from /users endpoint
-// TODO: Let Copilot generate this function
 async function fetchUsers(): Promise<User[]> {
+    // 👇 Type "const response = await fetch" below
 
 }
 
 // Function to fetch a single user by ID
-// TODO: Let Copilot generate this function
 async function fetchUserById(id: number): Promise<User> {
+    // 👇 Type "const response" below
 
 }
 
 // Function to fetch posts for a specific user
-// TODO: Let Copilot generate this function
 async function fetchUserPosts(userId: number): Promise<Post[]> {
+    // 👇 Type "const response" below
 
 }
 
@@ -86,17 +89,17 @@ async function fetchUserPosts(userId: number): Promise<Post[]> {
 // =============================================================================
 
 // Custom error class for API errors
-// TODO: Let Copilot generate this class
 class ApiError extends Error {
+    // 👇 Type "constructor" below
 
 }
 
 // Wrapper function that handles errors consistently
-// TODO: Let Copilot generate this function
 async function apiRequest<T>(
     endpoint: string,
     options?: RequestInit
 ): Promise<T> {
+    // 👇 Type "const response = await fetch" below
 
 }
 
@@ -106,20 +109,20 @@ async function apiRequest<T>(
 // =============================================================================
 
 // Create a new post
-// TODO: Let Copilot generate this function
 async function createPost(post: Omit<Post, 'id'>): Promise<Post> {
+    // 👇 Type "const response = await fetch" below
 
 }
 
 // Update an existing post
-// TODO: Let Copilot generate this function
 async function updatePost(id: number, updates: Partial<Post>): Promise<Post> {
+    // 👇 Type "const response" below
 
 }
 
 // Delete a post
-// TODO: Let Copilot generate this function
 async function deletePost(id: number): Promise<boolean> {
+    // 👇 Type "const response" below
 
 }
 
@@ -137,14 +140,14 @@ interface PostQueryParams {
 }
 
 // Function to fetch posts with query parameters
-// TODO: Let Copilot generate this function
 async function fetchPostsWithParams(params: PostQueryParams): Promise<Post[]> {
+    // 👇 Type "const searchParams" or "const url" below
 
 }
 
 // Function to search posts by title
-// TODO: Let Copilot generate this function
 async function searchPosts(query: string): Promise<Post[]> {
+    // 👇 Type "return fetch" below
 
 }
 
@@ -160,20 +163,20 @@ interface AuthTokens {
 }
 
 // Function to login and get tokens
-// TODO: Let Copilot generate this function
 async function login(email: string, password: string): Promise<AuthTokens> {
+    // 👇 Type "const response = await fetch" below
 
 }
 
 // Function to create an authenticated fetch wrapper
-// TODO: Let Copilot generate this function
 function createAuthenticatedClient(getToken: () => string) {
+    // 👇 Type "return async" below
 
 }
 
 // Function to refresh access token
-// TODO: Let Copilot generate this function
 async function refreshAccessToken(refreshToken: string): Promise<AuthTokens> {
+    // 👇 Type "const response" below
 
 }
 
@@ -190,12 +193,12 @@ interface RetryOptions {
 }
 
 // Function with exponential backoff retry
-// TODO: Let Copilot generate this function
 async function fetchWithRetry<T>(
     url: string,
     options?: RequestInit,
     retryOptions?: Partial<RetryOptions>
 ): Promise<T> {
+    // 👇 Type "const { maxRetries" or "let retries" below
 
 }
 
@@ -205,17 +208,17 @@ async function fetchWithRetry<T>(
 // =============================================================================
 
 // Function that supports request cancellation
-// TODO: Let Copilot generate this function
 function fetchWithCancel<T>(url: string): {
     promise: Promise<T>;
     cancel: () => void;
 } {
+    // 👇 Type "const controller" below
 
 }
 
 // Hook-style function for cancellable requests
-// TODO: Let Copilot generate this function
 function useCancellableFetch() {
+    // 👇 Type "const controller" below
 
 }
 
@@ -225,42 +228,49 @@ function useCancellableFetch() {
 // =============================================================================
 
 // Complete API client with all features
-// TODO: Let Copilot generate this class based on the signature
 class ApiClient {
     private baseUrl: string;
     private defaultHeaders: Record<string, string>;
     private authToken?: string;
 
     constructor(baseUrl: string, options?: { headers?: Record<string, string> }) {
-        // TODO: Initialize
+        // 👇 Type "this.baseUrl" below
+
     }
 
     setAuthToken(token: string): void {
-        // TODO: Implement
+        // 👇 Type "this.authToken" below
+
     }
 
     clearAuthToken(): void {
-        // TODO: Implement
+        // 👇 Type "this.authToken" below
+
     }
 
     async get<T>(endpoint: string, params?: Record<string, any>): Promise<T> {
-        // TODO: Implement
+        // 👇 Type "const url" below
+
     }
 
     async post<T>(endpoint: string, data: any): Promise<T> {
-        // TODO: Implement
+        // 👇 Type "const response" below
+
     }
 
     async put<T>(endpoint: string, data: any): Promise<T> {
-        // TODO: Implement
+        // 👇 Type "const response" below
+
     }
 
     async patch<T>(endpoint: string, data: any): Promise<T> {
-        // TODO: Implement
+        // 👇 Type "const response" below
+
     }
 
     async delete<T>(endpoint: string): Promise<T> {
-        // TODO: Implement
+        // 👇 Type "const response" below
+
     }
 }
 
@@ -270,17 +280,18 @@ class ApiClient {
 // =============================================================================
 
 // Rate limiter for API requests
-// TODO: Let Copilot generate this class
 class RateLimiter {
     private requestsPerSecond: number;
     private queue: Array<() => void>;
     
     constructor(requestsPerSecond: number) {
-        // TODO: Implement
+        // 👇 Type "this.requestsPerSecond" below
+
     }
 
     async throttle<T>(fn: () => Promise<T>): Promise<T> {
-        // TODO: Implement
+        // 👇 Type "return new Promise" below
+
     }
 }
 
@@ -295,21 +306,23 @@ interface CacheOptions {
 }
 
 // Cached API client
-// TODO: Let Copilot generate this class
 class CachedApiClient {
     private cache: Map<string, { data: any; timestamp: number }>;
     private options: CacheOptions;
 
     constructor(options: CacheOptions) {
-        // TODO: Implement
+        // 👇 Type "this.cache" below
+
     }
 
     async fetch<T>(url: string, options?: RequestInit): Promise<T> {
-        // TODO: Implement with caching
+        // 👇 Type "const cacheKey" or "const cached" below
+
     }
 
     invalidate(pattern?: string): void {
-        // TODO: Implement cache invalidation
+        // 👇 Type "if (pattern)" or "this.cache" below
+
     }
 }
 

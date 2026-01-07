@@ -4,9 +4,13 @@
  * Create complete functions from signatures and types.
  *
  * INSTRUCTIONS:
- * 1. Define function signatures with proper TypeScript types
- * 2. Let Copilot generate the implementation
- * 3. Types help Copilot understand your intent better
+ * 1. The function signatures are already defined with TypeScript types
+ * 2. Place your cursor on the line after the TODO comment
+ * 3. Start typing (e.g., "return" or "const") to trigger Copilot
+ * 4. Press Tab to accept the suggestion
+ *
+ * TIP: You can also select the entire function and use Ctrl+I (Inline Chat)
+ * to ask Copilot to "implement this function"
  *
  * WHAT YOU'LL LEARN:
  * - How TypeScript types improve Copilot suggestions
@@ -20,15 +24,18 @@
 // Define the signature, let Copilot fill in the body
 
 function capitalize(str: string): string {
-    // TODO: Let Copilot generate the implementation
+    // 👇 Type "return" below and let Copilot complete
+
 }
 
 function sum(numbers: number[]): number {
-    // TODO: Let Copilot generate the implementation
+    // 👇 Type "return" below and let Copilot complete
+
 }
 
 function findMax(numbers: number[]): number | undefined {
-    // TODO: Let Copilot generate the implementation
+    // 👇 Type "if" or "return" below and let Copilot complete
+
 }
 
 
@@ -52,19 +59,23 @@ interface CreateUserInput {
 }
 
 function createUser(input: CreateUserInput): User {
-    // TODO: Let Copilot generate - it knows the User interface!
+    // 👇 Type "return" below - Copilot knows the User interface!
+
 }
 
 function filterActiveUsers(users: User[]): User[] {
-    // TODO: Let Copilot generate
+    // 👇 Type "return" below
+
 }
 
 function findUserByEmail(users: User[], email: string): User | undefined {
-    // TODO: Let Copilot generate
+    // 👇 Type "return" below
+
 }
 
 function sortUsersByAge(users: User[], ascending: boolean = true): User[] {
-    // TODO: Let Copilot generate
+    // 👇 Type "return" below
+
 }
 
 
@@ -74,23 +85,28 @@ function sortUsersByAge(users: User[], ascending: boolean = true): User[] {
 // Copilot understands generics and type constraints
 
 function first<T>(array: T[]): T | undefined {
-    // TODO: Let Copilot generate
+    // 👇 Type "return" below
+
 }
 
 function last<T>(array: T[]): T | undefined {
-    // TODO: Let Copilot generate
+    // 👇 Type "return" below
+
 }
 
 function unique<T>(array: T[]): T[] {
-    // TODO: Let Copilot generate
+    // 👇 Type "return" below
+
 }
 
 function groupBy<T, K extends keyof T>(array: T[], key: K): Record<string, T[]> {
-    // TODO: Let Copilot generate
+    // 👇 Type "const result" or "return" below
+
 }
 
 function pluck<T, K extends keyof T>(array: T[], key: K): T[K][] {
-    // TODO: Let Copilot generate
+    // 👇 Type "return" below
+
 }
 
 
@@ -110,7 +126,8 @@ interface Product {
 type ProductUpdate = Partial<Omit<Product, 'id'>>;
 
 function updateProduct(product: Product, updates: ProductUpdate): Product {
-    // TODO: Let Copilot generate
+    // 👇 Type "return" below
+
 }
 
 function filterProducts(
@@ -122,7 +139,8 @@ function filterProducts(
         inStock?: boolean;
     }
 ): Product[] {
-    // TODO: Let Copilot generate
+    // 👇 Type "return products.filter" below
+
 }
 
 
@@ -145,14 +163,16 @@ interface PaginatedResponse<T> {
 }
 
 async function fetchUser(id: string): Promise<ApiResponse<User>> {
-    // TODO: Let Copilot generate a mock implementation
+    // 👇 Type "return" below for a mock implementation
+
 }
 
 async function fetchPaginatedUsers(
     page: number,
     pageSize: number
 ): Promise<PaginatedResponse<User>> {
-    // TODO: Let Copilot generate
+    // 👇 Type "return" below
+
 }
 
 
@@ -175,35 +195,43 @@ class Cache<T> {
     private options: CacheOptions;
 
     constructor(options: CacheOptions) {
-        // TODO: Let Copilot generate
+        // 👇 Type "this.cache" below
+
     }
 
     set(key: string, value: T): void {
-        // TODO: Let Copilot generate
+        // 👇 Type "const entry" or "this.cache.set" below
+
     }
 
     get(key: string): T | undefined {
-        // TODO: Let Copilot generate
+        // 👇 Type "const entry" below
+
     }
 
     has(key: string): boolean {
-        // TODO: Let Copilot generate
+        // 👇 Type "const entry" or "return" below
+
     }
 
     delete(key: string): boolean {
-        // TODO: Let Copilot generate
+        // 👇 Type "return" below
+
     }
 
     clear(): void {
-        // TODO: Let Copilot generate
+        // 👇 Type "this.cache" below
+
     }
 
     private isExpired(entry: CacheEntry<T>): boolean {
-        // TODO: Let Copilot generate
+        // 👇 Type "return" below
+
     }
 
     private evictExpired(): void {
-        // TODO: Let Copilot generate
+        // 👇 Type "for" or "this.cache.forEach" below
+
     }
 }
 
@@ -218,11 +246,13 @@ type Shape =
     | { kind: 'triangle'; base: number; height: number };
 
 function calculateArea(shape: Shape): number {
-    // TODO: Let Copilot generate - it will use type narrowing!
+    // 👇 Type "switch" or "if" below - Copilot will use type narrowing!
+
 }
 
 function isCircle(shape: Shape): shape is { kind: 'circle'; radius: number } {
-    // TODO: Let Copilot generate
+    // 👇 Type "return" below
+
 }
 
 
@@ -235,18 +265,21 @@ type Result<T, E = Error> =
     | { success: false; error: E };
 
 function parseJSON<T>(json: string): Result<T> {
-    // TODO: Let Copilot generate
+    // 👇 Type "try" below
+
 }
 
 function divide(a: number, b: number): Result<number, string> {
-    // TODO: Let Copilot generate
+    // 👇 Type "if" below
+
 }
 
 async function fetchWithTimeout<T>(
     url: string,
     timeoutMs: number
 ): Promise<Result<T>> {
-    // TODO: Let Copilot generate
+    // 👇 Type "try" below
+
 }
 
 

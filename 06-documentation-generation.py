@@ -164,13 +164,12 @@ def analyze_text(
     custom_dictionary=None
 ):
     """
-    # TODO: Let Copilot generate comprehensive documentation
-    # Include:
-    # - Description
-    # - All parameters with types and defaults
-    # - Return value structure
-    # - Examples
-    # - Raises section
+    👇 Delete this docstring, type triple quotes, and let Copilot generate:
+    - Description
+    - All parameters with types and defaults
+    - Return value structure
+    - Examples
+    - Raises section
     """
     pass
 
@@ -224,8 +223,8 @@ def search_products(
     offset: int = 0
 ) -> Dict[str, Union[List[Dict], int, bool]]:
     """
-    # TODO: Let Copilot generate documentation
-    # The type hints will help it understand the structure
+    👇 Delete this docstring, type triple quotes, and let Copilot generate
+    The type hints will help it understand the structure
     """
     pass
 
