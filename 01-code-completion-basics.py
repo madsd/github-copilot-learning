@@ -5,9 +5,8 @@ Learn how GitHub Copilot suggests code as you type.
 
 INSTRUCTIONS:
 1. Go to each TODO comment and read what to do
-2. Position your cursor on the BLANK LINE below the TODO
-3. Start typing the suggested code - Copilot will offer completions
-4. Press Tab to accept, Esc to dismiss, or Alt+] to see alternatives
+2. Start typing the suggested code - Copilot will offer completions
+3. Press Tab to accept, Esc to dismiss, or Alt+] to see alternatives
 
 WHAT YOU'LL LEARN:
 - Basic code completion
@@ -30,7 +29,7 @@ last_name = "Smith"
 # =============================================================================
 # Copilot recognizes patterns and continues them
 
-days_of_week = ["Monday", "Tuesday", "Wednesday"]  # <- Add a comma after the ]
+days_of_week = ["Monday", "Tuesday", "Wednesday"]
 # TODO: Place cursor at the end of the list above, add a comma, press Enter
 #       Copilot will suggest the next days of the week
 

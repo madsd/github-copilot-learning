@@ -4,9 +4,13 @@
  * Generate code from natural language comments.
  *
  * INSTRUCTIONS:
- * 1. Write a descriptive comment explaining what you want
- * 2. Press Enter and wait for Copilot suggestions
- * 3. Accept with Tab or cycle through alternatives with Alt+]
+ * 1. Read the descriptive comment above each exercise
+ * 2. On the blank line below, start typing: function or const
+ * 3. Copilot will suggest code based on the comment context
+ * 4. Press Tab to accept, or Alt+] to see alternatives
+ *
+ * KEY INSIGHT: Copilot reads the comments ABOVE your cursor to understand
+ * what you want. The comment is the "prompt" - your typing triggers the suggestion.
  *
  * WHAT YOU'LL LEARN:
  * - How to write effective prompts in comments
@@ -19,11 +23,11 @@
 // =============================================================================
 
 // Function that takes a string and returns it reversed
-// TODO: Press Enter after this comment and let Copilot generate the function
+// 👇 Type "function reverse" on the blank line and let Copilot complete it
 
 
 // Function that checks if a number is prime
-// TODO: Let Copilot generate this function
+// 👇 Type "function isPrime" below
 
 
 // =============================================================================
@@ -32,11 +36,11 @@
 // The more specific your comment, the better the code
 
 // Function that formats a phone number from "1234567890" to "(123) 456-7890"
-// TODO: Let Copilot generate this function
+// 👇 Type "function formatPhone" below
 
 
 // Function that converts Celsius to Fahrenheit using the formula F = C * 9/5 + 32
-// TODO: Let Copilot generate this function
+// 👇 Type "function celsiusTo" below
 
 
 // =============================================================================
@@ -45,13 +49,13 @@
 
 // Function that takes an array of objects with 'name' and 'age' properties
 // and returns only the objects where age is 18 or older
-// TODO: Let Copilot generate this function
+// 👇 Type "function filterAdults" below
 
 
 // Function that groups an array of objects by a specified property
 // Example: groupBy([{type: 'a', val: 1}, {type: 'b', val: 2}, {type: 'a', val: 3}], 'type')
 // Returns: { a: [{type: 'a', val: 1}, {type: 'a', val: 3}], b: [{type: 'b', val: 2}] }
-// TODO: Let Copilot generate this function
+// 👇 Type "function groupBy" below
 
 
 // =============================================================================
@@ -59,11 +63,11 @@
 // =============================================================================
 
 // Function that creates a button element with text, class name, and click handler
-// TODO: Let Copilot generate this function
+// 👇 Type "function createButton" below
 
 
 // Function that toggles dark mode by adding/removing 'dark-mode' class on document body
-// TODO: Let Copilot generate this function
+// 👇 Type "function toggleDark" below
 
 
 // =============================================================================
@@ -73,12 +77,12 @@
 // Async function that fetches user data from an API endpoint
 // and returns the parsed JSON response
 // Handles errors and returns null if the request fails
-// TODO: Let Copilot generate this function
+// 👇 Type "async function fetchUser" below
 
 
 // Async function that fetches data with retry logic
 // Retries up to 3 times with exponential backoff (1s, 2s, 4s delays)
-// TODO: Let Copilot generate this function
+// 👇 Type "async function fetchWithRetry" below
 
 
 // =============================================================================
@@ -92,11 +96,11 @@
 // - Contains at least one number
 // - Contains at least one special character (!@#$%^&*)
 // Returns an object with { isValid: boolean, errors: string[] }
-// TODO: Let Copilot generate this function
+// 👇 Type "function validatePassword" below
 
 
 // Function that validates a credit card number using the Luhn algorithm
-// TODO: Let Copilot generate this function
+// 👇 Type "function validateCard" below
 
 
 // =============================================================================
@@ -105,12 +109,12 @@
 
 // Function that takes a date and returns a human-readable relative time
 // Examples: "just now", "5 minutes ago", "2 hours ago", "yesterday", "3 days ago"
-// TODO: Let Copilot generate this function
+// 👇 Type "function getRelativeTime" below
 
 
 // Function that calculates the number of business days between two dates
 // (excludes weekends)
-// TODO: Let Copilot generate this function
+// 👇 Type "function getBusinessDays" below
 
 
 // =============================================================================
@@ -124,7 +128,7 @@
 // - getTotal()
 // - clear()
 // Each product has: id, name, price
-// TODO: Let Copilot generate this class
+// 👇 Type "class ShoppingCart" below
 
 
 // =============================================================================
@@ -135,7 +139,7 @@
  * Function that converts a number to its Roman numeral representation
  * Examples: 1 -> "I", 4 -> "IV", 9 -> "IX", 42 -> "XLII"
  */
-// TODO: Let Copilot generate this function
+// 👇 Type "function toRoman" below
 
 
 /**
@@ -144,7 +148,7 @@
  * @param {number} delay - The delay in milliseconds
  * @returns {Function} - The debounced function
  */
-// TODO: Let Copilot generate this function
+// 👇 Type "function debounce" below
 
 
 // =============================================================================
