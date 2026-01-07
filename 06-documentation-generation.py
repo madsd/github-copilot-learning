@@ -25,11 +25,10 @@ WHAT YOU'LL LEARN:
 # =============================================================================
 # EXERCISE 1: Basic Docstrings
 # =============================================================================
-# Each function has a blank line after 'def' where you should type """
+# On the blank line after each 'def', type """ and press Enter
 
 def calculate_discount(price, discount_percent, max_discount=None):
-    ""
-    # 👆 Place cursor on the blank line ABOVE this comment, type """ and Enter
+    """👈 DELETE this line, type """ and press Enter - Copilot will generate!"""
     if discount_percent < 0 or discount_percent > 100:
         raise ValueError("Discount must be between 0 and 100")
     
@@ -42,7 +41,7 @@ def calculate_discount(price, discount_percent, max_discount=None):
 
 
 def merge_sorted_lists(list1, list2):
-    # 👆 Place cursor on blank line above, type """ and Enter
+    """👈 DELETE this line, type """ and press Enter"""
     result = []
     i = j = 0
     
@@ -64,21 +63,21 @@ def merge_sorted_lists(list1, list2):
 # =============================================================================
 # Try generating docstrings in different styles
 
-# Google Style - type """ on the blank line below def
+# Google Style - DELETE the placeholder docstring, type """ and Enter
 def fetch_user_data(user_id, include_metadata=False):
-    # 👆 Type """ above, then start with "Fetches user data from..."
+    """👈 DELETE this, type """ then "Fetches user data" and Enter"""
     pass
 
 
-# NumPy Style - type """ then write "Parameters" and Copilot continues
+# NumPy Style - try starting with "Calculate statistics..."
 def calculate_statistics(data):
-    # 👆 Type """ above, then type "Calculate" and let Copilot continue
+    """👈 DELETE this, type """ then "Calculate" and Enter"""
     pass
 
 
-# Sphinx/reStructuredText Style
+# Sphinx/reStructuredText Style - try starting with ":param"
 def process_transaction(amount, currency, description=None):
-    # 👆 Type """ above, then type ":param amount:" and Copilot continues
+    """👈 DELETE this, type """ then ":param amount:" and Enter"""
     pass
 
 
@@ -130,27 +129,25 @@ class TaskManager:
 # =============================================================================
 # EXERCISE 4: API Documentation
 # =============================================================================
-# Type """ on the blank line after each def, then describe the API endpoint
 
 def create_user(username, email, password, role="user"):
-    # 👆 Type """ above, then start: "Create a new user account..."
+    """👈 DELETE this, type """ and Enter"""
     pass
 
 
 def update_user_profile(user_id, updates):
-    # 👆 Type """ above
+    """👈 DELETE this, type """ and Enter"""
     pass
 
 
 def delete_user(user_id, soft_delete=True):
-    # 👆 Type """ above
+    """👈 DELETE this, type """ and Enter"""
     pass
 
 
 # =============================================================================
 # EXERCISE 5: Complex Function Documentation
 # =============================================================================
-# Functions with many parameters benefit most from Copilot docs
 
 def analyze_text(
     text,
@@ -162,15 +159,13 @@ def analyze_text(
     entity_types=None,
     custom_dictionary=None
 ):
-    # 👆 Type """ on the blank line above this comment
-    # Copilot will generate comprehensive docs for all parameters
+    """👈 DELETE this, type """ and Enter - Copilot will document all params!"""
     pass
 
 
 # =============================================================================
 # EXERCISE 6: Type Hints + Documentation
 # =============================================================================
-# Type hints help Copilot generate better docstrings
 
 from typing import Optional, List, Dict, Union
 from datetime import datetime
@@ -184,54 +179,29 @@ def search_products(
     limit: int = 20,
     offset: int = 0
 ) -> Dict[str, Union[List[Dict], int, bool]]:
-    # 👆 Type """ on the blank line above this comment
-    # Type hints help Copilot understand types and generate better docs
+    """👈 DELETE this, type """ and Enter - type hints improve the docs!"""
     pass
-
-
-# =============================================================================
-# EXERCISE 7: Using Copilot Chat for Documentation
-# =============================================================================
-# Sometimes Chat is easier than inline docstrings
-
-# TRY THESE COPILOT CHAT COMMANDS:
-#
-# 1. Select any function above, press Ctrl+I, type: /doc
-#
-# 2. Select the TaskManager class, press Ctrl+I, type:
-#    "Add Google-style docstrings to all methods"
-#
-# 3. Select multiple functions, press Ctrl+I, type:
-#    "Add NumPy-style docstrings"
-#
-# 4. Open Chat panel (Ctrl+Alt+I), type:
-#    "Generate README documentation for this file"
 
 
 # =============================================================================
 # KEY TAKEAWAYS
 # =============================================================================
 """
-TWO WAYS TO GENERATE DOCSTRINGS:
+TWO METHODS TO GENERATE DOCSTRINGS:
 
-1. INLINE METHOD:
-   - Go to blank line after 'def function_name():'
+METHOD 1 - Type """ (inline):
+   - Delete the placeholder docstring in any function above
    - Type \"\"\" and press Enter
-   - Copilot suggests the docstring
+   - Copilot should suggest docstring content
    - Press Tab to accept
 
-2. COPILOT CHAT METHOD (often easier):
-   - Select the function or class
-   - Press Ctrl+I (inline) or Ctrl+Alt+I (panel)
+METHOD 2 - Use /doc command (RECOMMENDED - more reliable!):
+   - Select the entire function (from 'def' to 'pass')
+   - Press Ctrl+I (inline chat)
    - Type: /doc
-   - Copilot adds docstrings
+   - Press Enter and accept the changes
 
-DOCSTRING STYLES:
-- Google Style: Args, Returns, Raises sections
-- NumPy Style: Parameters, Returns, Examples
-- Sphinx: :param:, :returns:, :raises:
-
-TIP: Start typing the style you want after \"\"\" and Copilot will follow it!
+If inline typing isn't triggering suggestions, use Method 2!
 
 NEXT: Move on to 07-code-refactoring.js to learn
       how to improve code quality with Copilot!
