@@ -5,13 +5,7 @@ Create docstrings and documentation with GitHub Copilot.
 
 HOW TO GENERATE DOCSTRINGS:
 
-METHOD 1 - Inline Generation:
-1. Place cursor on the BLANK LINE right after the function signature (def line)
-2. Type three quotes: \"\"\"
-3. Press Enter - Copilot will suggest the docstring content
-4. Press Tab to accept
-
-METHOD 2 - Copilot Chat:
+Copilot Chat:
 1. Select the entire function
 2. Press Ctrl+I (inline chat) or Ctrl+Alt+I (chat panel)
 3. Type: /doc  OR  "add docstring"
@@ -25,10 +19,9 @@ WHAT YOU'LL LEARN:
 # =============================================================================
 # EXERCISE 1: Basic Docstrings
 # =============================================================================
-# On the blank line after each 'def', type """ and press Enter
+# Mark the individual functions below and use /doc to generate docstrings
 
 def calculate_discount(price, discount_percent, max_discount=None):
-    """👈 DELETE this line, type """ and press Enter - Copilot will generate!"""
     if discount_percent < 0 or discount_percent > 100:
         raise ValueError("Discount must be between 0 and 100")
     
@@ -41,7 +34,6 @@ def calculate_discount(price, discount_percent, max_discount=None):
 
 
 def merge_sorted_lists(list1, list2):
-    """👈 DELETE this line, type """ and press Enter"""
     result = []
     i = j = 0
     
@@ -59,32 +51,8 @@ def merge_sorted_lists(list1, list2):
 
 
 # =============================================================================
-# EXERCISE 2: Different Docstring Formats
-# =============================================================================
-# Try generating docstrings in different styles
-
-# Google Style - DELETE the placeholder docstring, type """ and Enter
-def fetch_user_data(user_id, include_metadata=False):
-    """👈 DELETE this, type """ then "Fetches user data" and Enter"""
-    pass
-
-
-# NumPy Style - try starting with "Calculate statistics..."
-def calculate_statistics(data):
-    """👈 DELETE this, type """ then "Calculate" and Enter"""
-    pass
-
-
-# Sphinx/reStructuredText Style - try starting with ":param"
-def process_transaction(amount, currency, description=None):
-    """👈 DELETE this, type """ then ":param amount:" and Enter"""
-    pass
-
-
-# =============================================================================
 # EXERCISE 3: Class Documentation (Use Copilot Chat)
 # =============================================================================
-# For classes, using Copilot Chat is easier than inline docstrings
 # 
 # STEPS:
 # 1. Select the ENTIRE class below (from 'class' to the last method)
@@ -131,17 +99,14 @@ class TaskManager:
 # =============================================================================
 
 def create_user(username, email, password, role="user"):
-    """👈 DELETE this, type """ and Enter"""
     pass
 
 
 def update_user_profile(user_id, updates):
-    """👈 DELETE this, type """ and Enter"""
     pass
 
 
 def delete_user(user_id, soft_delete=True):
-    """👈 DELETE this, type """ and Enter"""
     pass
 
 
@@ -159,7 +124,7 @@ def analyze_text(
     entity_types=None,
     custom_dictionary=None
 ):
-    """👈 DELETE this, type """ and Enter - Copilot will document all params!"""
+
     pass
 
 
@@ -179,7 +144,7 @@ def search_products(
     limit: int = 20,
     offset: int = 0
 ) -> Dict[str, Union[List[Dict], int, bool]]:
-    """👈 DELETE this, type """ and Enter - type hints improve the docs!"""
+    
     pass
 
 
@@ -187,21 +152,14 @@ def search_products(
 # KEY TAKEAWAYS
 # =============================================================================
 """
-TWO METHODS TO GENERATE DOCSTRINGS:
 
-METHOD 1 - Type """ (inline):
-   - Delete the placeholder docstring in any function above
-   - Type \"\"\" and press Enter
-   - Copilot should suggest docstring content
-   - Press Tab to accept
-
-METHOD 2 - Use /doc command (RECOMMENDED - more reliable!):
+Use /doc command (RECOMMENDED - more reliable!):
    - Select the entire function (from 'def' to 'pass')
    - Press Ctrl+I (inline chat)
    - Type: /doc
    - Press Enter and accept the changes
 
-If inline typing isn't triggering suggestions, use Method 2!
+Inline typing can also be used, but is currently not reliable!
 
 NEXT: Move on to 07-code-refactoring.js to learn
       how to improve code quality with Copilot!

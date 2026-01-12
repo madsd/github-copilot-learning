@@ -1,6 +1,6 @@
 # Scenario 20: Playwright MCP for Browser Automation
 
-Learn how to use the Playwright Model Context Protocol (MCP) server for browser automation with Copilot.
+Learn how to use the Playwright Model Context Protocol (MCP) server for browser automation with Copilot (VS Code only).
 
 ## 🎯 Learning Objectives
 

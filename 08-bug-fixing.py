@@ -298,6 +298,6 @@ USEFUL PROMPTS:
 - "What edge cases am I missing?"
 - "How can I prevent this type of bug?"
 
-NEXT: Move on to 09-regex-generation.js to learn
-      how to create complex regular expressions!
+NEXT: Move on to 09-security-vulnerability-detection.py to learn
+      how to finding security vulnerabilities!
 """

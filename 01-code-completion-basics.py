@@ -53,55 +53,19 @@ user = {
 # Copilot can complete entire function bodies based on the name
 
 def calculate_area_of_circle(radius):
-    # TODO: Delete 'pass', type 'return' and let Copilot complete
     pass
-
-
-def is_palindrome(text):
     # TODO: Delete 'pass', type 'return' and let Copilot complete
-    pass
 
-
-# =============================================================================
-# EXERCISE 5: Import Statement Completion
-# =============================================================================
-# Copilot suggests common imports based on your code context
-
-# TODO: On the blank line below, type 'import ' and see common suggestions
-#       Or try 'from datetime import ' and see available options
-
-
+    
 
 # =============================================================================
-# EXERCISE 6: Loop Completion
+# EXERCISE 5: Loop Completion
 # =============================================================================
 # Copilot recognizes iteration patterns
 
 numbers = [1, 2, 3, 4, 5]
 
 # TODO: On the blank line below, type 'for ' and let Copilot suggest the loop
-
-
-
-# =============================================================================
-# EXERCISE 7: Class Completion
-# =============================================================================
-# Copilot can generate class structures
-
-class Rectangle:
-    # TODO: Delete 'pass' below, type 'def __init__' and let Copilot complete
-    pass
-
-
-# =============================================================================
-# BONUS CHALLENGE
-# =============================================================================
-# Try creating your own scenarios! Start typing and see what Copilot suggests:
-# - A function to validate an email address
-# - A class representing a bank account
-# - A list of countries and their capitals
-
-# Your code here:
 
 
 # =============================================================================
